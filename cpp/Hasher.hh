@@ -3,6 +3,9 @@
 
 #include <iostream>
 #include <cryptopp/sha.h>
+#include <cryptopp/cryptlib.h>
+#include <cryptopp/hex.h>
+#include <cryptopp/files.h>
 
 class Hasher
 {
