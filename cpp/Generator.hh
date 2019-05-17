@@ -1,5 +1,5 @@
-#ifndef GENERATOR_H
-#define GENERATOR_H
+#ifndef GENERATOR_HH
+#define GENERATOR_HH
 
 #include <string>
 
