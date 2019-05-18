@@ -2,6 +2,7 @@
 #define GENERATOR_HH
 
 #include <string>
+#include <iostream>
 
 class Generator
 {

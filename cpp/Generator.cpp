@@ -1,8 +1,4 @@
-#include <string>
-#include <iostream>
-
 #include "Generator.hh"
-
 
 Generator::Generator(std::string _chars, int _maxOutputLength)
 {

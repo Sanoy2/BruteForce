@@ -1,9 +1,7 @@
 #include "Hasher.hh"
 
 Hasher::Hasher()
-{
-    std::cout << "Hello from hasher" << std::endl;
-}
+{}
 
 std::string Hasher::Hash(std::string text)
 {
@@ -16,6 +14,6 @@ std::string Hasher::Hash(std::string text)
     new CryptoPP::HashFilter(
         hash, 
         new CryptoPP::HexEncoder(new CryptoPP::StringSink(digest))));
-        
+
     return digest;
 }
