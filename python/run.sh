@@ -3,4 +3,4 @@ clear
 chars='1234567890'
 length=9
 
-python main.py $chars $length
+python3 main.py $chars $length
