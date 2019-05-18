@@ -5,4 +5,4 @@ def make_hash_sha256(word):
     m = hashlib.sha256()
     m.update(arr)
     sha256_hash = m.hexdigest()
-    return sha256_hash
+    return sha256_hash.upper()
