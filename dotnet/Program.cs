@@ -6,18 +6,17 @@ namespace dotnet
     {
         static void Main(string[] args)
         {
-            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            chars += chars.ToLower();
-            chars += "`1234567890-=~!@#$%^&*()_+[]\\{}|;':\",./<>?";
+            string chars = args[0];
+            int maxLength = Int32.Parse(args[1]);
 
-            var maxOutputLength = 4;
+            var passwordGetter = new PasswordGetter();
+            var digests = passwordGetter.GetPasswordsHashes();
+            var breaker = new PasswordBreaker(chars, digests, maxLength);
+            var result = breaker.StartBreaking();
 
-            var generator = new Generator(chars, maxOutputLength);
-            generator.Generate();
-            // generator.Print();
-            foreach (var word in generator.Words)
+            foreach (var item in result)
             {
-                System.Console.WriteLine($"{word} : {word.Make_Hash_SHA256()}");
+                System.Console.WriteLine($"Digest : {item.Key} Word: {item.Value}");
             }
         }
     }

@@ -3,9 +3,9 @@ using System.Text;
 
 namespace dotnet
 {
-    public static class Hasher
+    public class Hasher
     {
-        public static string Make_Hash_SHA256(this string word)
+        public string Make_Hash_SHA256(string word)
         {
             var wordBytes = Encoding.UTF8.GetBytes(word);
 
