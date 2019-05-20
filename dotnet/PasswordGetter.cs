@@ -1,22 +1,30 @@
 using System.Collections.Generic;
+using System.IO;
 
 namespace dotnet
 {
     public class PasswordGetter
     {
-        public IEnumerable<string> GetPasswordsHashes()
+        public IEnumerable<string> GetPasswordsHashes(string path)
         {
-            var digests = new List<string>();
+            var result = new List<string>();
+            string line;
 
-            var hasher = new Hasher();
-            digests.Add(hasher.Make_Hash_SHA256("abc"));
-            digests.Add(hasher.Make_Hash_SHA256("qaz"));
-            digests.Add(hasher.Make_Hash_SHA256("sdf"));
-            digests.Add(hasher.Make_Hash_SHA256("zxc"));
-            digests.Add(hasher.Make_Hash_SHA256("sdf"));
-            digests.Add(hasher.Make_Hash_SHA256("zmp"));
+            FileStream fileStream = new FileStream(path, FileMode.Open);
+            using (StreamReader reader = new StreamReader(fileStream))
+            {
+                while (!reader.EndOfStream)
+                {
+                    line = reader.ReadLine();
+                    line = line.Trim();
+                    if(line.Length == 64)
+                    {
+                        result.Add(line.ToLower());
+                    }
+                }
+            }
 
-            return digests;
+            return result;
         }
     }
 }

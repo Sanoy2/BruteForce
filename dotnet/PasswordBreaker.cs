@@ -59,9 +59,9 @@ namespace dotnet
             {
                 if(digest.Equals(item))
                 {
-                    System.Console.WriteLine("HIT!");
-                    System.Console.WriteLine($"Digest: {digest}");
-                    System.Console.WriteLine($"Word  : {word}");
+                    // System.Console.WriteLine("HIT!");
+                    // System.Console.WriteLine($"Digest: {digest}");
+                    // System.Console.WriteLine($"Word  : {word}");
                     brokenPasswords[digest] = word;
                     passwordsToBreak.Remove(digest);
                     CompareDigests(digest, word);

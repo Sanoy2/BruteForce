@@ -1,6 +1,7 @@
 #!/bin/bash
 clear
-chars='qwertyuiopasdfghjklzxcvbnm1234567890'
-length=3
+chars='0123456789'
+length=4
+path_to_file=~/Thesis/BruteForce/just_numbers_max_4.txt
 
-dotnet run $chars $length
+dotnet run $chars $length $path_to_file
