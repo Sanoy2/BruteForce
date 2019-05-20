@@ -1,6 +1,7 @@
 #!/bin/bash
 clear
-chars='1234567890'
-length=9
+chars='0123456789'
+length=4
+path_to_file=~/Thesis/BruteForce/just_numbers_max_4.txt
 
-python3 main.py $chars $length
+python3 main.py $chars $length $path_to_file

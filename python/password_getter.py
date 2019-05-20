@@ -1,15 +1,11 @@
-import hasher
-
-def get_passwords_hashes():
+def get_passwords_hashes(path:str) -> []:
     digests = []
-    # digests.append(hasher.make_hash_sha256("abc"))
-    # digests.append(hasher.make_hash_sha256("abc"))
-    # digests.append(hasher.make_hash_sha256("abc"))
-    # digests.append(hasher.make_hash_sha256("qaz"))
-    # digests.append(hasher.make_hash_sha256("sdf"))
-    # digests.append(hasher.make_hash_sha256("zXz"))
-    # digests.append(hasher.make_hash_sha256("zmp"))
-    # digests.append(hasher.make_hash_sha256("sdf"))
-    # digests.append(hasher.make_hash_sha256("qaz"))
-    digests.append(hasher.make_hash_sha256("667771862"))
+    file = open(path, "r")
+    for line in file:
+        line = line.strip()
+        if len(line) == 64: # 64 digits in sha 256
+            digests.append(line.upper())
+    
+    print(len(digests))
+    file.close()
     return digests

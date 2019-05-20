@@ -20,7 +20,7 @@ class password_breaker:
         for i in range (0, len(self.chars)):
             new_word = word + self.chars[i]
             sha256_hash = hasher.make_hash_sha256(new_word)
-            print(new_word + " : " + sha256_hash)
+            # print(new_word + " : " + sha256_hash)
             self.compare_digests(sha256_hash,new_word)
             if len(self.passwords_to_break) == 0:
                 return
@@ -32,8 +32,8 @@ class password_breaker:
     def compare_digests(self, digest, word):
         for password_digest in self.passwords_to_break:
             if password_digest == digest:
-                print("HIT!")
-                print("Digest: " + digest)
-                print("Word  : " + word)
+                # print("HIT!")
+                # print("Digest: " + digest)
+                # print("Word  : " + word)
                 self.broken_passwords[digest] = word
                 self.passwords_to_break.remove(password_digest)
