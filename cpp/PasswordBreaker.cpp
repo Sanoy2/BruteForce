@@ -54,9 +54,9 @@ void PasswordBreaker::CompareDigests(std::string digest, std::string word)
     {
         if(digest == passwordsToBreak[i])
         {
-            std::cout << "HIT! " << std::endl;
-            std::cout << "Digest : " << digest << std::endl;
-            std::cout << "Word   : " << word << std::endl << std::endl; 
+            // std::cout << "HIT! " << std::endl;
+            // std::cout << "Digest : " << digest << std::endl;
+            // std::cout << "Word   : " << word << std::endl << std::endl; 
             brokenPasswords.insert(std::pair<std::string, std::string>(digest, word));
             passwordsToBreak.erase(passwordsToBreak.begin() + i);
             CompareDigests(digest, word);
