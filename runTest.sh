@@ -49,7 +49,6 @@ function perform_test()
     for (( i=0; i<$repetitions; i++ ))
     do
         test_number=$(($i+1))
-        rm ~/Thesis/Images/processedImages/*
         echo Running test $test_number of $repetitions
         wait
 
