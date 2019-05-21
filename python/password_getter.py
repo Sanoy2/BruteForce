@@ -6,6 +6,5 @@ def get_passwords_hashes(path:str) -> []:
         if len(line) == 64: # 64 digits in sha 256
             digests.append(line.upper())
     
-    print(len(digests))
     file.close()
     return digests
