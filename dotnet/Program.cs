@@ -9,7 +9,7 @@ namespace dotnet
             string chars = args[0];
             int maxLength = Int32.Parse(args[1]);
             string digestsToBrakeFilepath = args[2];
-            string filepath="here.txt";
+            string filepath="../results/dotnetBroken.txt";
             
             var passwordGetter = new PasswordGetter();
             var digests = passwordGetter.GetPasswordsHashes(digestsToBrakeFilepath);

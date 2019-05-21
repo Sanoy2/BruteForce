@@ -15,7 +15,7 @@ int main(int argc, char** argv)
     PasswordGetter passwordGetter;
     std::vector<std::string> digests = passwordGetter.GetPasswordsHashes(filepath);
     
-    std::string resultsPath = "here.txt";
+    std::string resultsPath = "../results/cppBroken.txt";
 
     // for (int i = 0; i < digests.size(); i++)
     // {

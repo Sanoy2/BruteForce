@@ -10,7 +10,7 @@ def main():
     chars = sys.argv[1]
     max_length = int(sys.argv[2])
     digests_to_break_filepath = sys.argv[3]
-    results_filepath = "here.txt"
+    results_filepath = "../results/pythonBroken.txt";
 
     digests = password_getter.get_passwords_hashes(digests_to_break_filepath)
 
