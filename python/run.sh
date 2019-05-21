@@ -1,4 +1,5 @@
 #!/bin/bash
+
 clear
 chars='0123456789'
 length=4

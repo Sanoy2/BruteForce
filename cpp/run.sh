@@ -1,7 +1,8 @@
 #!/bin/bash
 
-chars='qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890!@#$%^&*()-_=+[]{};:,./<>?'
+clear
+chars='0123456789'
 length=4
-path_to_file=~/Thesis/BruteForce/mix_of_letters_numbers_specials_max_4.txt
+path_to_file=~/Thesis/BruteForce/just_numbers_max_4.txt
 
 ./a.out $chars $length $path_to_file
