@@ -10,7 +10,7 @@ EXEC = a.out
 all: $(EXEC)
 
 $(EXEC): $(OBJ)
-	$(CXX) $(LDFLAGS) -o $@ $(OBJ) $(LBLIBS)
+	$(CXX) $(LDFLAGS) -o $@ $(OBJ) $(LBLIBS) -O2
 
 clean:
 	rm -rf $(OBJ) $(EXEC)
