@@ -113,9 +113,6 @@ function cpp_tests()
     perform_test "$command" $resultFile $repetitions  
     wait
     cd ..
-    cd results
-    python clean.py $number_of_images
-    cd ..
     echo -e "C++ tests finished\n"
 }
 
